@@ -19,46 +19,65 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a href="#work" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-copper focus:text-ink focus:px-4 focus:py-2 focus:rounded">Skip to projects</a>
 
-  <header class="mx-auto max-w-6xl px-6 pt-6 flex items-center justify-between">
-    <a href="#top" class="font-display text-lg font-bold tracking-wide text-paper">M. Ridwan H.</a>
-    <nav aria-label="Main" class="flex gap-5 text-sm text-mute">
-      <a href="#work" class="hover:text-paper">Projects</a>
-      <a href="#skills" class="hover:text-paper hidden sm:inline">Skills</a>
-      <a href="#certs" class="hover:text-paper hidden sm:inline">Certifications</a>
-      <a href="#contact" class="hover:text-paper">Contact</a>
-    </nav>
+  <header id="siteHeader" class="site-header sticky top-0 z-40">
+    <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-end md:justify-center">
+      <nav aria-label="Main" class="hidden md:block">
+        <ul class="flex items-center gap-2 text-sm">
+          <li><a href="#work" class="nav-link block px-4 py-2">Projects</a></li>
+          <li><a href="#skills" class="nav-link block px-4 py-2">Skills</a></li>
+          <li><a href="#certs" class="nav-link block px-4 py-2">Certifications</a></li>
+          <li><a href="#contact" class="nav-link block px-4 py-2">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menuBtn" type="button" class="burger md:hidden -mr-2 p-3 text-paper" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobileMenu" class="menu-panel md:hidden absolute inset-x-0 top-full" inert>
+      <div>
+        <nav aria-label="Mobile">
+          <ul class="menu-sheet px-6 pb-5 pt-1 border-y border-line">
+            <li><a href="#work" class="nav-link block py-3 text-lg">Projects</a></li>
+            <li><a href="#skills" class="nav-link block py-3 text-lg">Skills</a></li>
+            <li><a href="#certs" class="nav-link block py-3 text-lg">Certifications</a></li>
+            <li><a href="#contact" class="nav-link block py-3 text-lg">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <main id="top">
     <!-- Hero -->
-    <section class="mx-auto max-w-6xl px-6 pt-12 sm:pt-20 pb-14 grid gap-10 lg:grid-cols-[1fr_20rem] lg:items-end">
+    <section class="mx-auto max-w-6xl px-6 pt-10 sm:pt-16 pb-14 grid gap-10 lg:grid-cols-[1fr_20rem] lg:items-end">
       <div class="order-2 lg:order-1">
-        <p class="text-copper-soft font-medium">Full-stack web developer</p>
-        <h1 class="font-display font-bold uppercase leading-[0.92] tracking-tight text-paper mt-4 text-[clamp(2.6rem,7.4vw,5.75rem)]">
+        <p data-reveal class="text-copper-soft font-medium">Full-stack web developer</p>
+        <h1 data-reveal style="--d:80ms" class="font-display font-bold uppercase leading-[0.92] tracking-tight text-paper mt-4 text-[clamp(2.6rem,7.4vw,5.75rem)]">
           Muhammad Ridwan<br>Hidayatullah
         </h1>
-        <p class="mt-8 max-w-2xl text-xl sm:text-2xl leading-snug text-paper">
+        <p data-reveal style="--d:160ms" class="mt-8 max-w-2xl text-xl sm:text-2xl leading-snug text-paper">
           I take web systems from requirements to a live site: modules and user roles, the database, the Laravel code, and the deployment.
         </p>
-        <p class="mt-4 max-w-2xl text-mute leading-relaxed">
+        <p data-reveal style="--d:220ms" class="mt-4 max-w-2xl text-mute leading-relaxed">
           Information Technology graduate of Universitas Muhammadiyah Yogyakarta (GPA 3.69) and BNSP Certified
           Web Developer. Based in Sukabumi, West Java, open to full-time roles on-site, hybrid or remote.
         </p>
-        <div class="mt-9 flex flex-wrap gap-3">
-          <a href="assets/CV_Muhammad_Ridwan_Hidayatullah.pdf" download class="inline-flex items-center rounded-md bg-copper px-5 py-3 font-semibold text-ink hover:bg-copper-soft">Download CV (PDF)</a>
-          <a href="mailto:ridwanhh10@gmail.com" class="inline-flex items-center rounded-md border border-line px-5 py-3 font-medium text-paper hover:border-copper">Email me</a>
-          <a href="https://github.com/Dwanmrh" target="_blank" rel="noopener" class="inline-flex items-center rounded-md border border-line px-5 py-3 font-medium text-paper hover:border-copper">GitHub</a>
-          <a href="https://www.linkedin.com/in/mridwanhidayatullah" target="_blank" rel="noopener" class="inline-flex items-center rounded-md border border-line px-5 py-3 font-medium text-paper hover:border-copper">LinkedIn</a>
+        <div data-reveal style="--d:280ms" class="mt-9 flex flex-wrap gap-3">
+          <a href="assets/CV_Muhammad_Ridwan_Hidayatullah.pdf" download class="btn inline-flex items-center rounded-md bg-copper px-5 py-3 font-semibold text-ink hover:bg-copper-soft">Download CV (PDF)</a>
+          <a href="mailto:ridwanhh10@gmail.com" class="btn inline-flex items-center rounded-md border border-line px-5 py-3 font-medium text-paper hover:border-copper">Email me</a>
+          <a href="https://github.com/Dwanmrh" target="_blank" rel="noopener" class="btn inline-flex items-center rounded-md border border-line px-5 py-3 font-medium text-paper hover:border-copper">GitHub</a>
+          <a href="https://www.linkedin.com/in/mridwanhidayatullah" target="_blank" rel="noopener" class="btn inline-flex items-center rounded-md border border-line px-5 py-3 font-medium text-paper hover:border-copper">LinkedIn</a>
         </div>
       </div>
-      <figure class="order-1 lg:order-2 w-40 sm:w-48 lg:w-full">
+      <figure data-reveal style="--d:120ms" class="order-1 lg:order-2 w-40 sm:w-48 lg:w-full">
         <picture>
           <source srcset="assets/img/ridwan.webp" type="image/webp">
-          <img src="assets/img/ridwan.jpg" width="640" height="800" alt="Portrait of Muhammad Ridwan Hidayatullah in a black suit and tie" class="block w-full h-auto rounded-lg border-b-4 border-copper">
+          <img src="assets/img/ridwan.jpg" width="640" height="800" alt="Portrait of Muhammad Ridwan Hidayatullah in a black suit and tie" class="photo block w-full h-auto rounded-lg border-b-4 border-copper">
         </picture>
       </figure>
     </section>
@@ -66,30 +85,30 @@
     <!-- Signature: the end-to-end workflow -->
     <section aria-labelledby="pipe-title" class="border-y border-line bg-panel/60">
       <div class="mx-auto max-w-6xl px-6 py-12">
-        <h2 id="pipe-title" class="font-display text-2xl font-medium text-paper">How a project goes live</h2>
-        <p class="mt-2 text-mute max-w-xl">The workflow I follow, from the first requirement to a site people can use.</p>
+        <h2 data-reveal id="pipe-title" class="font-display text-2xl font-medium text-paper">How a project goes live</h2>
+        <p data-reveal style="--d:80ms" class="mt-2 text-mute max-w-xl">The workflow I follow, from the first requirement to a site people can use.</p>
 
-        <div class="relative mt-10">
+        <div class="pipe relative mt-10" data-pipe>
           <div aria-hidden="true" class="pipe-line hidden md:block absolute left-[6px] right-[6px] top-[6px] h-[2px] bg-copper"></div>
           <div aria-hidden="true" class="md:hidden absolute left-[6px] top-2 bottom-2 w-[2px] bg-copper"></div>
           <ol class="relative grid gap-8 md:grid-cols-4 md:gap-6">
-            <li class="pipe-node relative pl-8 md:pl-0">
-              <span class="absolute md:static left-0 mt-1 md:mt-0 block h-[14px] w-[14px] rounded-full bg-copper ring-4 ring-ink"></span>
+            <li data-reveal style="--d:200ms" class="relative pl-8 md:pl-0">
+              <span style="--d:300ms" class="pipe-dot absolute md:static left-0 mt-1 md:mt-0 block h-[14px] w-[14px] rounded-full bg-copper ring-4 ring-ink"></span>
               <h3 class="md:mt-6 font-semibold text-paper">Requirements</h3>
               <p class="mt-1 text-sm text-mute">Map the business process into modules and user roles, then design the MySQL schema.</p>
             </li>
-            <li class="pipe-node relative pl-8 md:pl-0">
-              <span class="absolute md:static left-0 mt-1 md:mt-0 block h-[14px] w-[14px] rounded-full bg-copper ring-4 ring-ink"></span>
+            <li data-reveal style="--d:320ms" class="relative pl-8 md:pl-0">
+              <span style="--d:520ms" class="pipe-dot absolute md:static left-0 mt-1 md:mt-0 block h-[14px] w-[14px] rounded-full bg-copper ring-4 ring-ink"></span>
               <h3 class="md:mt-6 font-semibold text-paper">Application logic</h3>
               <p class="mt-1 text-sm text-mute">Laravel with MVC, Eloquent ORM and middleware for access control and business rules.</p>
             </li>
-            <li class="pipe-node relative pl-8 md:pl-0">
-              <span class="absolute md:static left-0 mt-1 md:mt-0 block h-[14px] w-[14px] rounded-full bg-copper ring-4 ring-ink"></span>
+            <li data-reveal style="--d:440ms" class="relative pl-8 md:pl-0">
+              <span style="--d:740ms" class="pipe-dot absolute md:static left-0 mt-1 md:mt-0 block h-[14px] w-[14px] rounded-full bg-copper ring-4 ring-ink"></span>
               <h3 class="md:mt-6 font-semibold text-paper">Interface</h3>
               <p class="mt-1 text-sm text-mute">Blade templates styled with Tailwind CSS, plus JavaScript where a page needs it.</p>
             </li>
-            <li class="pipe-node relative pl-8 md:pl-0">
-              <span class="absolute md:static left-0 mt-1 md:mt-0 block h-[14px] w-[14px] rounded-full bg-copper ring-4 ring-ink"></span>
+            <li data-reveal style="--d:560ms" class="relative pl-8 md:pl-0">
+              <span style="--d:960ms" class="pipe-dot absolute md:static left-0 mt-1 md:mt-0 block h-[14px] w-[14px] rounded-full bg-copper ring-4 ring-ink"></span>
               <h3 class="md:mt-6 font-semibold text-paper">Live site</h3>
               <p class="mt-1 text-sm text-mute">Built and tested locally in Laragon, then deployed to Hostinger.</p>
             </li>
@@ -100,10 +119,10 @@
 
     <!-- Projects -->
     <section id="work" aria-labelledby="work-title" class="mx-auto max-w-6xl px-6 py-20">
-      <h2 id="work-title" class="font-display text-3xl sm:text-4xl font-medium text-paper">Selected projects</h2>
+      <h2 data-reveal id="work-title" class="font-display text-3xl sm:text-4xl font-medium text-paper">Selected projects</h2>
 
       <!-- Featured -->
-      <article class="mt-10 grid gap-8 lg:grid-cols-5 border-t border-copper pt-8">
+      <article data-reveal class="mt-10 grid gap-8 lg:grid-cols-5 border-t border-copper pt-8">
         <div class="lg:col-span-3">
           <p class="text-sm text-copper-soft">Internship, Setukpa Lemdiklat Polri, Jul to Sep 2025</p>
           <h3 class="mt-2 font-display text-3xl font-medium text-paper">Official website of Setukpa Lemdiklat Polri</h3>
@@ -127,7 +146,7 @@
 
       <!-- Other projects -->
       <div class="mt-14 grid gap-x-12 gap-y-12 md:grid-cols-2">
-        <article class="border-t border-line pt-6">
+        <article data-reveal style="--d:0ms" class="lift border-t border-line pt-6">
           <p class="text-sm text-copper-soft">Undergraduate thesis</p>
           <h3 class="mt-2 font-display text-2xl font-medium text-paper">SIPKKJ: health and physical fitness assessment</h3>
           <p class="mt-3 text-mute leading-relaxed">
@@ -138,7 +157,7 @@
           <p class="mt-2 text-sm text-mute">No public demo: the system handles personnel health data.</p>
         </article>
 
-        <article class="border-t border-line pt-6">
+        <article data-reveal style="--d:120ms" class="lift border-t border-line pt-6">
           <p class="text-sm text-copper-soft">Point of sale</p>
           <h3 class="mt-2 font-display text-2xl font-medium text-paper">Teh Jumbo: POS and cash management</h3>
           <p class="mt-3 text-mute leading-relaxed">
@@ -148,7 +167,7 @@
           <p class="mt-4 text-sm text-paper">Laravel 12</p>
         </article>
 
-        <article class="border-t border-line pt-6">
+        <article data-reveal style="--d:0ms" class="lift border-t border-line pt-6">
           <p class="text-sm text-copper-soft">Campus workflow</p>
           <h3 class="mt-2 font-display text-2xl font-medium text-paper">Student complaint system</h3>
           <p class="mt-3 text-mute leading-relaxed">
@@ -157,7 +176,7 @@
           <p class="mt-4 text-sm text-paper">Laravel 12</p>
         </article>
 
-        <article class="border-t border-line pt-6">
+        <article data-reveal style="--d:120ms" class="lift border-t border-line pt-6">
           <p class="text-sm text-mute">In progress</p>
           <h3 class="mt-2 font-display text-2xl font-medium text-paper">Canteen cashier admin</h3>
           <p class="mt-3 text-mute leading-relaxed">
@@ -167,7 +186,7 @@
         </article>
       </div>
 
-      <p class="mt-14 max-w-3xl text-mute leading-relaxed">
+      <p data-reveal class="mt-14 max-w-3xl text-mute leading-relaxed">
         Coursework also includes Android apps built with Kotlin, Jetpack Compose, Room, MVVM and Firebase, and CRUD apps
         with Node.js (Express, EJS). Code is on
         <a href="https://github.com/Dwanmrh" target="_blank" rel="noopener" class="text-copper-soft underline underline-offset-4 decoration-copper/50 hover:decoration-copper-soft">github.com/Dwanmrh</a>.
@@ -177,14 +196,14 @@
     <!-- Skills -->
     <section id="skills" aria-labelledby="skills-title" class="border-t border-line">
       <div class="mx-auto max-w-6xl px-6 py-20 grid gap-10 lg:grid-cols-3">
-        <h2 id="skills-title" class="font-display text-3xl sm:text-4xl font-medium text-paper">Skills</h2>
+        <h2 data-reveal id="skills-title" class="font-display text-3xl sm:text-4xl font-medium text-paper">Skills</h2>
         <dl class="lg:col-span-2 grid gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div><dt class="font-semibold text-paper">System design</dt><dd class="mt-1 text-mute">Business process to module mapping, relational database design, role-based access, report requirements</dd></div>
-          <div><dt class="font-semibold text-paper">Backend</dt><dd class="mt-1 text-mute">PHP, Laravel (MVC, Eloquent ORM, middleware), Node.js (Express)</dd></div>
-          <div><dt class="font-semibold text-paper">Database</dt><dd class="mt-1 text-mute">MySQL, schema design and migrations</dd></div>
-          <div><dt class="font-semibold text-paper">Frontend</dt><dd class="mt-1 text-mute">HTML, CSS, Tailwind CSS, Blade, JavaScript, React (basic)</dd></div>
-          <div><dt class="font-semibold text-paper">Mobile</dt><dd class="mt-1 text-mute">Kotlin, Jetpack Compose, Room, MVVM, Firebase</dd></div>
-          <div><dt class="font-semibold text-paper">Tools and other</dt><dd class="mt-1 text-mute">Git and GitHub, Laragon, Hostinger deployment, Python, C++ (OOP, data structures)</dd></div>
+          <div data-reveal style="--d:0ms"><dt class="font-semibold text-paper">System design</dt><dd class="mt-1 text-mute">Business process to module mapping, relational database design, role-based access, report requirements</dd></div>
+          <div data-reveal style="--d:100ms"><dt class="font-semibold text-paper">Backend</dt><dd class="mt-1 text-mute">PHP, Laravel (MVC, Eloquent ORM, middleware), Node.js (Express)</dd></div>
+          <div data-reveal style="--d:60ms"><dt class="font-semibold text-paper">Database</dt><dd class="mt-1 text-mute">MySQL, schema design and migrations</dd></div>
+          <div data-reveal style="--d:160ms"><dt class="font-semibold text-paper">Frontend</dt><dd class="mt-1 text-mute">HTML, CSS, Tailwind CSS, Blade, JavaScript, React (basic)</dd></div>
+          <div data-reveal style="--d:120ms"><dt class="font-semibold text-paper">Mobile</dt><dd class="mt-1 text-mute">Kotlin, Jetpack Compose, Room, MVVM, Firebase</dd></div>
+          <div data-reveal style="--d:220ms"><dt class="font-semibold text-paper">Tools and other</dt><dd class="mt-1 text-mute">Git and GitHub, Laragon, Hostinger deployment, Python, C++ (OOP, data structures)</dd></div>
         </dl>
       </div>
     </section>
@@ -192,16 +211,16 @@
     <!-- Experience & education -->
     <section id="path" aria-labelledby="path-title" class="border-t border-line">
       <div class="mx-auto max-w-6xl px-6 py-20 grid gap-10 lg:grid-cols-3">
-        <h2 id="path-title" class="font-display text-3xl sm:text-4xl font-medium text-paper">Experience and education</h2>
+        <h2 data-reveal id="path-title" class="font-display text-3xl sm:text-4xl font-medium text-paper">Experience and education</h2>
         <ol class="lg:col-span-2 space-y-10">
-          <li class="grid sm:grid-cols-[9rem_1fr] gap-2 sm:gap-6">
+          <li data-reveal style="--d:0ms" class="grid sm:grid-cols-[9rem_1fr] gap-2 sm:gap-6">
             <p class="text-sm text-mute pt-1">2022 to 2026</p>
             <div>
               <h3 class="text-lg font-semibold text-paper">Bachelor's degree in Information Technology</h3>
               <p class="text-mute">Universitas Muhammadiyah Yogyakarta. GPA 3.69 / 4.00. Graduated September 2026.</p>
             </div>
           </li>
-          <li class="grid sm:grid-cols-[9rem_1fr] gap-2 sm:gap-6">
+          <li data-reveal style="--d:120ms" class="grid sm:grid-cols-[9rem_1fr] gap-2 sm:gap-6">
             <p class="text-sm text-mute pt-1">Jul to Sep 2025</p>
             <div>
               <h3 class="text-lg font-semibold text-paper">Intern, Setukpa Lemdiklat Polri</h3>
@@ -215,15 +234,15 @@
     <!-- Certifications -->
     <section id="certs" aria-labelledby="certs-title" class="border-t border-line">
       <div class="mx-auto max-w-6xl px-6 py-20 grid gap-10 lg:grid-cols-3">
-        <h2 id="certs-title" class="font-display text-3xl sm:text-4xl font-medium text-paper">Certifications</h2>
+        <h2 data-reveal id="certs-title" class="font-display text-3xl sm:text-4xl font-medium text-paper">Certifications</h2>
         <div class="lg:col-span-2 grid gap-6 sm:grid-cols-2">
-          <article class="rounded-lg border border-line bg-panel p-6">
+          <article data-reveal style="--d:0ms" class="lift rounded-lg border border-line bg-panel p-6">
             <h3 class="font-semibold text-paper text-lg">Certified Web Developer (CWDev)</h3>
             <p class="mt-1 text-mute">BNSP, through LSP Informatika</p>
             <p class="mt-4 text-sm text-mute">Issued March 2026, valid until March 2029</p>
             <p class="mt-1 text-sm text-mute">Credential ID TIK.317.00563 2026</p>
           </article>
-          <article class="rounded-lg border border-line bg-panel p-6">
+          <article data-reveal style="--d:120ms" class="lift rounded-lg border border-line bg-panel p-6">
             <h3 class="font-semibold text-paper text-lg">IT Specialist: HTML and CSS</h3>
             <p class="mt-1 text-mute">Certiport, a Pearson VUE business</p>
             <p class="mt-4 text-sm text-mute">Issued June 2026, valid until June 2031</p>
@@ -237,8 +256,8 @@
     <!-- Contact -->
     <section id="contact" aria-labelledby="contact-title" class="border-t border-copper">
       <div class="mx-auto max-w-6xl px-6 py-20">
-        <h2 id="contact-title" class="font-display text-4xl sm:text-5xl font-medium text-paper max-w-3xl">Have a Laravel project or an open role? Let's talk.</h2>
-        <div class="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-x-10 gap-y-4 text-lg">
+        <h2 data-reveal id="contact-title" class="font-display text-4xl sm:text-5xl font-medium text-paper max-w-3xl">Have a Laravel project or an open role? Let's talk.</h2>
+        <div data-reveal style="--d:120ms" class="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-x-10 gap-y-4 text-lg">
           <a href="mailto:ridwanhh10@gmail.com" class="text-copper-soft underline underline-offset-4 decoration-copper/50 hover:decoration-copper-soft">ridwanhh10@gmail.com</a>
           <a href="https://www.linkedin.com/in/mridwanhidayatullah" target="_blank" rel="noopener" class="text-paper hover:text-copper-soft">linkedin.com/in/mridwanhidayatullah</a>
           <a href="https://github.com/Dwanmrh" target="_blank" rel="noopener" class="text-paper hover:text-copper-soft">github.com/Dwanmrh</a>
@@ -254,8 +273,81 @@
     </div>
   </footer>
 
+  <button id="toTop" type="button" aria-label="Back to top" class="to-top fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center rounded-full bg-copper text-ink shadow-lg hover:bg-copper-soft">
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      var header = document.getElementById('siteHeader');
+      var toTop = document.getElementById('toTop');
+      var btn = document.getElementById('menuBtn');
+      var panel = document.getElementById('mobileMenu');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // header border + scroll-to-top visibility
+      function onScroll() {
+        var y = window.scrollY;
+        header.classList.toggle('is-scrolled', y > 8);
+        toTop.classList.toggle('is-visible', y > 600);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      toTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      });
+
+      // mobile menu
+      function setMenu(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        panel.classList.toggle('is-open', open);
+        if (open) { panel.removeAttribute('inert'); } else { panel.setAttribute('inert', ''); }
+      }
+      btn.addEventListener('click', function () {
+        setMenu(btn.getAttribute('aria-expanded') !== 'true');
+      });
+      panel.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setMenu(false); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setMenu(false);
+      });
+      window.matchMedia('(min-width: 768px)').addEventListener('change', function (e) {
+        if (e.matches) setMenu(false);
+      });
+
+      // reveal on scroll
+      var items = document.querySelectorAll('[data-reveal], [data-pipe]');
+      if (!('IntersectionObserver' in window) || reduce) {
+        items.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+        items.forEach(function (el) { io.observe(el); });
+      }
+
+      // highlight the nav link of the section on screen
+      var links = document.querySelectorAll('.nav-link');
+      var ids = ['work', 'skills', 'certs', 'contact'];
+      if ('IntersectionObserver' in window) {
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            links.forEach(function (l) {
+              l.setAttribute('aria-current', l.getAttribute('href') === '#' + en.target.id ? 'true' : 'false');
+            });
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        ids.forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
+      }
+    })();
   </script>
 </body>
 </html>
