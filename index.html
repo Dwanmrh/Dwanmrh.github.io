@@ -28,6 +28,7 @@
     <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-end md:justify-center">
       <nav aria-label="Main" class="hidden md:block">
         <ul class="flex items-center gap-2 text-sm">
+          <li><a href="#about" class="nav-link block px-4 py-2">About</a></li>
           <li><a href="#work" class="nav-link block px-4 py-2">Projects</a></li>
           <li><a href="#skills" class="nav-link block px-4 py-2">Skills</a></li>
           <li><a href="#certs" class="nav-link block px-4 py-2">Certifications</a></li>
@@ -42,6 +43,7 @@
       <div>
         <nav aria-label="Mobile">
           <ul class="menu-sheet px-6 pb-5 pt-1 border-y border-line">
+            <li><a href="#about" class="nav-link block py-3 text-lg">About</a></li>
             <li><a href="#work" class="nav-link block py-3 text-lg">Projects</a></li>
             <li><a href="#skills" class="nav-link block py-3 text-lg">Skills</a></li>
             <li><a href="#certs" class="nav-link block py-3 text-lg">Certifications</a></li>
@@ -54,7 +56,7 @@
 
   <main id="top">
     <!-- Hero -->
-    <section class="mx-auto max-w-6xl px-6 pt-10 sm:pt-16 pb-14 grid gap-10 lg:grid-cols-[1fr_20rem] lg:items-end">
+    <section id="about" aria-label="About" class="mx-auto max-w-6xl px-6 pt-10 sm:pt-16 pb-14 grid gap-10 lg:grid-cols-[1fr_20rem] lg:items-end">
       <div class="order-2 lg:order-1">
         <p data-reveal class="text-copper-soft font-medium">Full-stack web developer</p>
         <h1 data-reveal style="--d:80ms" class="font-display font-bold uppercase leading-[0.92] tracking-tight text-paper mt-4 text-[clamp(2.6rem,7.4vw,5.75rem)]">
@@ -335,7 +337,7 @@
 
       // highlight the nav link of the section on screen
       var links = document.querySelectorAll('.nav-link');
-      var ids = ['work', 'skills', 'certs', 'contact'];
+      var ids = ['about', 'work', 'skills', 'certs', 'contact'];
       if ('IntersectionObserver' in window) {
         var spy = new IntersectionObserver(function (entries) {
           entries.forEach(function (en) {
